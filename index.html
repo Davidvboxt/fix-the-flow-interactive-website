@@ -39,54 +39,6 @@
         </div>
     </div>
 
-    <style>
-        .blocks {
-            margin: 0 auto;
-            padding: 1em;
-            gap: 60px;
-        }
-
-        @media (min-width: 600px) {
-            .blocks {
-                display: grid;
-                grid-template: 1fr 1fr / 5fr 1fr;
-                grid-template-areas:
-                    'block-1 block-2'
-                    'block-3 block-4';
-                max-width: 30em;
-            }
-        }
-
-        @media (min-width: 820px) {
-            .blocks {
-                display: flex;
-                max-width: 100%;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .block {
-                margin-bottom: 70px;
-            }
-        }
-
-        .block-1 {
-            grid-area: block-1;
-        }
-
-        .block-2 {
-            grid-area: block-2;
-        }
-
-        .block-3 {
-            grid-area: block-3;
-        }
-
-        .block-4 {
-            grid-area: block-4;
-        }
-    </style>
-
     <section>
         <div class="blocks">
             <div class="block block-1">
@@ -121,14 +73,14 @@
                     </h3>
 
                     <div class="mySlides fade">
-                        <img class="img-activiteit" src="./assets/images/lezing-1.jpg">
+                        <img class="img-activiteit" alt="Niek de groot presentatie" src="./assets/images/lezing-1.jpg">
                         <div class="activiteit-titel">Niek de groot gaat voor goud</div>
                         <p class="activiteit-date">Datum: 1 september 2023</p>
                         <p>Neem deel mee aan de presentatie van Niek over haar laatste gepubliceerd boek.</p>
                     </div>
 
                     <div class="mySlides fade">
-                        <img class="img-activiteit" src="./assets/images/lezing-2.png">
+                        <img class="img-activiteit" alt="Juf Braaksel meet & greet" src="./assets/images/lezing-2.png">
                         <div class="activiteit-titel">Juf Braaksel en de woeste</div>
                         <p class="activiteit-date">Datum: 23 maart 2023</p>
                         <p>Neem deel mee aan de meet & greet van juf Braaksel om kennis te maken.</p>
@@ -153,6 +105,7 @@
                     <button class="btn-book">Info</button>
                 </div>
             </div>
+        </div>
     </section>
 
 </body>
@@ -165,33 +118,4 @@
 <!-- Additional Scripts -->
 <script type="text/javascript" src="scripts/index.js"></script>
 
-<script>
 
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
-
-</script>
