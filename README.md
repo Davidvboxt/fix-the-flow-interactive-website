@@ -2,9 +2,6 @@
 Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. 
 De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-
-![schets-1](https://user-images.githubusercontent.com/112856021/219627437-b8b89d7b-5e28-4527-adf5-d43faff51fa6.jpg)
-
 # Interactie 
 
 ## Opdracht
@@ -20,3 +17,7 @@ De Stichting Openbare Bibliotheek Amsterdam (OBA) is een culturele instelling, d
 ![eindresultaat-1](https://user-images.githubusercontent.com/112856021/220071785-5373a412-4f29-4e79-b170-b34385522f8b.png)
 
 
+## Schets
+Ik zorgde voor een interactie die nuttig zou zijn op mijn website. Deze interactie zorgt er namelijk voor dat je zoveel mogelijk activiteiten kan zien in 1 positie. Doordat het namelijk een slide show is die op 1 positie blijft voorkom je het probleem dat je hele scherm vol staat met activiteiten, waardoor het chaotisch wordt.
+
+![schets-1](https://user-images.githubusercontent.com/112856021/219627437-b8b89d7b-5e28-4527-adf5-d43faff51fa6.jpg)
