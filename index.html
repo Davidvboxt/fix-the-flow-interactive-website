@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link href="styles/styles.css" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="titel">OBA</h1>
+        <div>
+            <a href="#" class="header-link">Help</a>
+            <span>|</span>
+            <a href="index.html" class="header-link">Mijn account</a>
+        </div>
+    </header>
+    <div class="sub-header">
+        <h2>Account</h2>
+        <p>In mijn account kunt u uw persoonlijke reserveringen, profiel en instellingen vinden.</p>
+        <div class="header-bottom">
+            <ul>
+                <li>
+                    <a href="#" class="active">Mijn reserveringen</a>
+                </li>
+                <li>
+                    <a href="profiel.html" class="">Profiel</a>
+                </li>
+                <li>
+                    <a href="instellingen.html" class="">Instellingen</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <style>
+        .blocks {
+            margin: 0 auto;
+            padding: 1em;
+            gap: 60px;
+        }
+
+        @media (min-width: 600px) {
+            .blocks {
+                display: grid;
+                grid-template: 1fr 1fr / 5fr 1fr;
+                grid-template-areas:
+                    'block-1 block-2'
+                    'block-3 block-4';
+                max-width: 30em;
+            }
+        }
+
+        @media (min-width: 820px) {
+            .blocks {
+                display: flex;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .block {
+                margin-bottom: 70px;
+            }
+        }
+
+        .block-1 {
+            grid-area: block-1;
+        }
+
+        .block-2 {
+            grid-area: block-2;
+        }
+
+        .block-3 {
+            grid-area: block-3;
+        }
+
+        .block-4 {
+            grid-area: block-4;
+        }
+    </style>
+
+    <section>
+        <div class="blocks">
+            <div class="block block-1">
+                <img class="img-book" src="./assets/images/boek-1.webp">
+                <div class="block-info">
+                    <p>
+                        Glazen troon
+                    </p>
+                    <button class="btn-book">Info</button>
+                </div>
+            </div>
+            <div class="block block-2">
+                <img class="img-book" src="./assets/images/boek-2.webp">
+                <div class="block-info">
+                    <p>
+                        Glazen troon
+                    </p>
+                    <button class="btn-book">Info</button>
+                </div>
+            </div>
+            <div class="block block-3">
+                <img class="img-book" src="./assets/images/boek-3.webp">
+                <div class="block-info">
+                    <p>
+                        Glazen troon
+                    </p>
+                    <button class="btn-book">Info</button>
+                </div>
+                <div class="activiteiten">
+                    <h3>
+                        Activiteiten
+                    </h3>
+
+                    <div class="mySlides fade">
+                        <img class="img-activiteit" src="./assets/images/lezing-1.jpg">
+                        <div class="activiteit-titel">Niek de groot gaat voor goud</div>
+                        <p class="activiteit-date">Datum: 1 september 2023</p>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img class="img-activiteit" src="./assets/images/lezing-2.png">
+                        <div class="activiteit-titel">Juf Braaksel en de woeste</div>
+                        <p class="activiteit-date">Datum: 23 maart 2023</p>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮ Vorige</a>
+                    <a class="next" onclick="plusSlides(1)">Volgende ❯</a>
+
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="block block-4">
+                <img class="img-book" src="./assets/images/boek-4.webp">
+                <div class="block-info">
+                    <p>
+                        Glazen troon
+                    </p>
+                    <button class="btn-book">Info</button>
+                </div>
+            </div>
+    </section>
+
+</body>
+
+</html>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+
+<!-- Additional Scripts -->
+<script type="text/javascript" src="scripts/index.js"></script>
+
+<script>
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+
+
+
+
+
+
+</script>
